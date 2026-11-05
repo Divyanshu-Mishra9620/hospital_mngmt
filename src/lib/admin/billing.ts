@@ -1,4 +1,3 @@
-import "server-only";
 import { and, count, desc, eq, gte, lt, or, sql, type SQL } from "drizzle-orm";
 import { db } from "@/db";
 import { PAYMENT_PURPOSES, patients, payments, users } from "@/db/schema";

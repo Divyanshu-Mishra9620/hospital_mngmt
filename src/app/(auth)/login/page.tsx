@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Alert } from "@/components/ui/misc";
+import { DemoDataNote } from "./demo-data-note";
 import { LoginForm } from "./login-form";
 
 export const metadata: Metadata = { title: "Sign in" };
@@ -25,6 +26,7 @@ export default async function LoginPage({ searchParams }: PageProps<"/login">) {
         {signedOut && <Alert tone="success">You have been signed out securely.</Alert>}
       </div>
       <LoginForm next={next} />
+      <DemoDataNote />
       <p className="mt-8 text-center text-sm text-ink-500">
         New to Medora?{" "}
         <Link href="/register" className="font-semibold text-brand-700 hover:underline">

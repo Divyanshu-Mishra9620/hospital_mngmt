@@ -1,4 +1,3 @@
-import "server-only";
 import { and, desc, eq, inArray } from "drizzle-orm";
 import { db } from "@/db";
 import { appointments, carePlans, departments, doctors, patients, prescriptionItems, prescriptions, users } from "@/db/schema";

@@ -1,4 +1,3 @@
-import "server-only";
 import { and, eq, gte, inArray, lte, ne } from "drizzle-orm";
 import { db } from "@/db";
 import { appointments, doctorLeaves, doctorSchedules, doctors, type AppointmentMode } from "@/db/schema";

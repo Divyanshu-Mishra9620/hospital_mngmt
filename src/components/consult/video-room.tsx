@@ -23,6 +23,7 @@ import {
   X,
 } from "lucide-react";
 import { cn } from "@/lib/cn";
+import { rtcFetch } from "@/lib/client/rtc";
 import { LogoMark } from "@/components/logo";
 import { Avatar } from "@/components/ui/misc";
 
@@ -80,7 +81,7 @@ function timeOf(iso: string) {
 
 /**
  * 1:1 video consultation room. Peer-to-peer WebRTC media; signalling is
- * relayed through /api/rtc/[code] (HTTP polling). The doctor always makes the
+ * relayed through a shared localStorage log (see lib/client/rtc.ts), polled. The doctor always makes the
  * offer: whenever the patient (re)joins, the doctor starts a fresh session.
  */
 export function VideoRoom(props: Props) {
@@ -194,7 +195,7 @@ export function VideoRoom(props: Props) {
 
     async function post(type: SignalType, payload: unknown) {
       try {
-        const res = await fetch(api, {
+        const res = await rtcFetch(api, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ type, payload: typeof payload === "string" ? payload : JSON.stringify(payload) }),
@@ -383,7 +384,7 @@ export function VideoRoom(props: Props) {
       if (joined) myJoinIdRef.current = joined.id;
       while (alive) {
         try {
-          const res = await fetch(`${api}?after=${cursorRef.current}`, { cache: "no-store" });
+          const res = await rtcFetch(`${api}?after=${cursorRef.current}`, { cache: "no-store" });
           if (res.ok) {
             const data = (await res.json()) as { signals: Signal[]; status: string };
             for (const s of data.signals) {
@@ -410,8 +411,7 @@ export function VideoRoom(props: Props) {
 
     const sendLeave = () => {
       const body = JSON.stringify({ type: "leave", payload: "" });
-      if (navigator.sendBeacon) navigator.sendBeacon(api, new Blob([body], { type: "application/json" }));
-      else void fetch(api, { method: "POST", headers: { "Content-Type": "application/json" }, body, keepalive: true });
+      void rtcFetch(api, { method: "POST", body });
     };
     window.addEventListener("pagehide", sendLeave);
 
@@ -432,7 +432,7 @@ export function VideoRoom(props: Props) {
     if (!text) return;
     setDraft("");
     try {
-      const res = await fetch(api, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ type: "chat", payload: text.slice(0, 1000) }) });
+      const res = await rtcFetch(api, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ type: "chat", payload: text.slice(0, 1000) }) });
       if (res.ok) {
         const r = (await res.json()) as { id: number; createdAt: string };
         setMessages((prev) => (prev.some((m) => m.id === r.id) ? prev : [...prev, { id: r.id, sender: role, text, at: r.createdAt }]));

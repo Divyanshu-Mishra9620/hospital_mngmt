@@ -1,6 +1,5 @@
-"use server";
-
 import { z } from "zod";
+import { ready } from "@/lib/client/store";
 import { db } from "@/db";
 import { enquiries, users } from "@/db/schema";
 import { and, eq } from "drizzle-orm";
@@ -17,6 +16,7 @@ const schema = z.object({
 });
 
 export async function submitEnquiryAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
+  await ready();
   const parsed = schema.safeParse(Object.fromEntries(formData));
   if (!parsed.success) return { ...fail("Please correct the highlighted fields.", zodFieldErrors(parsed.error.issues)), data: { values: Object.fromEntries(formData) } };
   const { website: _hp, ...v } = parsed.data;

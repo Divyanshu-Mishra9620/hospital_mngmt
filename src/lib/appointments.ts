@@ -14,7 +14,7 @@ export function videoJoinState(a: ApptLike, now: ClinicNow = clinicNow()) {
   if (a.mode !== "video" || !LIVE.includes(a.status)) return { canJoin: false as const, reason: "not_live" as const };
   const mins = minutesUntil(a.date, a.time, now);
   if (a.date !== now.date) return { canJoin: false as const, reason: mins > 0 ? ("too_early" as const) : ("ended" as const), minutes: mins };
-  if (mins > VIDEO_JOIN_EARLY_MIN) return { canJoin: false as const, reason: "too_early" as const, minutes: mins };
+  if (mins > VIDEO_JOIN_EARLY_MIN && a.status !== "in_consult") return { canJoin: false as const, reason: "too_early" as const, minutes: mins };
   if (mins < -VIDEO_JOIN_LATE_MIN && a.status !== "in_consult") return { canJoin: false as const, reason: "ended" as const, minutes: mins };
   return { canJoin: true as const, minutes: mins };
 }

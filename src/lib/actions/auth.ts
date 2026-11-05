@@ -1,13 +1,12 @@
-"use server";
-
-import { redirect } from "next/navigation";
+import { redirect } from "@/lib/client/navigation";
 import { eq, or, sql } from "drizzle-orm";
 import { z } from "zod";
+import { ready } from "@/lib/client/store";
 import { db } from "@/db";
 import { patients, users } from "@/db/schema";
 import { fail, zodFieldErrors, type ActionState } from "@/lib/action-state";
 import { audit, notify } from "@/lib/audit";
-import { ROLE_HOME } from "@/lib/auth/jwt";
+import { ROLE_HOME } from "@/lib/auth/roles";
 import { hashPassword, verifyPassword } from "@/lib/auth/password";
 import { createSession, destroySession, getSession } from "@/lib/auth/session";
 import { isUniqueViolation } from "@/lib/codes";
@@ -29,6 +28,7 @@ function safeNext(next: string, role: string) {
 }
 
 export async function loginAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
+  await ready();
   const identifier = String(formData.get("identifier") ?? "").trim();
   const password = String(formData.get("password") ?? "");
   const next = String(formData.get("next") ?? "");
@@ -89,6 +89,7 @@ function normalisePhone(p: string) {
 }
 
 export async function registerAction(_prev: ActionState, formData: FormData): Promise<ActionState> {
+  await ready();
   const raw = Object.fromEntries(formData);
   const values = { name: raw.name, email: raw.email, phone: raw.phone, dob: raw.dob, gender: raw.gender };
   const withValues = (s: ActionState): ActionState => ({ ...s, data: { values } });

@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
-import { PatientShell } from "@/components/shell/patient-shell";
-import { requirePatient } from "@/lib/auth/session";
-import { patientCounts } from "@/lib/queries/patient";
+import type { ComponentProps } from "react";
+import View from "./layout-view";
 
 export const metadata: Metadata = { title: { default: "Patient portal", template: "%s · Medora Patient" } };
 
-export default async function PatientLayout({ children }: { children: React.ReactNode }) {
-  const { user, patient } = await requirePatient();
-  const counts = await patientCounts(user.id, patient.id);
-  return (
-    <PatientShell user={{ name: user.name, uhid: patient.uhid }} unread={counts.unread} cartCount={counts.cart}>
-      {children}
-    </PatientShell>
-  );
+// Data is loaded in the browser from local storage — see ./layout-view.tsx
+export default function Layout(props: ComponentProps<typeof View>) {
+  return <View {...props} />;
 }

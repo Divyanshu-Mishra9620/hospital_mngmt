@@ -1,7 +1,5 @@
-"use server";
-
-import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
+import { revalidatePath } from "@/lib/client/revalidate";
+import { redirect } from "@/lib/client/navigation";
 import { and, eq, gte, inArray } from "drizzle-orm";
 import { z } from "zod";
 import { db } from "@/db";

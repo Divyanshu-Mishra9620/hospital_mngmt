@@ -1,29 +1,9 @@
 import type { Metadata } from "next";
-import { asc } from "drizzle-orm";
-import { db } from "@/db";
-import { medicines } from "@/db/schema";
-import { requirePharmacist } from "@/lib/auth/session";
-import { Card, CardBody } from "@/components/ui/card";
-import { PageHeader } from "@/components/ui/misc";
-import { AddMedicineForm } from "@/components/pharmacy/medicine-forms";
+import View from "./page-view";
 
 export const metadata: Metadata = { title: "Add medicine" };
 
-export default async function NewMedicinePage() {
-  await requirePharmacist();
-  const cats = await db.selectDistinct({ category: medicines.category }).from(medicines).orderBy(asc(medicines.category));
-  return (
-    <div className="max-w-4xl">
-      <PageHeader
-        back={{ href: "/pharmacy/inventory", label: "Inventory" }}
-        title="Add a medicine"
-        description="Creates a new SKU in the hospital formulary. A SKU code (MED-xxxx) is assigned automatically."
-      />
-      <Card>
-        <CardBody className="sm:p-6">
-          <AddMedicineForm categories={cats.map((c) => c.category)} />
-        </CardBody>
-      </Card>
-    </div>
-  );
+// Data is loaded in the browser from local storage — see ./page-view.tsx
+export default function Page() {
+  return <View />;
 }

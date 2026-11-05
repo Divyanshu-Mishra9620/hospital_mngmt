@@ -3,10 +3,9 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Allows a separate build output (e.g. NEXT_DIST_DIR=.next-prod) so a
   // production build never disturbs a running `next dev`.
-  // Note: the SQLite database lives outside this folder (see src/db/url.ts) so
-  // database writes don't trigger the dev file watcher.
+  // Local-storage mode: the app's SQLite database runs in the browser (sql.js,
+  // see src/lib/client/store.ts); there is no server database.
   distDir: process.env.NEXT_DIST_DIR || ".next",
-  serverExternalPackages: ["@libsql/client", "libsql"],
   turbopack: {
     rules: {
       "*.css": {

@@ -1,4 +1,3 @@
-import "server-only";
 import { db } from "@/db";
 import { settings } from "@/db/schema";
 
