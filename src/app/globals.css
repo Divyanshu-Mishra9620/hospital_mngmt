@@ -1,0 +1,194 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   Medora Multispeciality Hospital — design tokens
+   ========================================================================== */
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: var(--font-jakarta), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Brand: clinical teal */
+  --color-brand-50: #eef7f8;
+  --color-brand-100: #d5ecef;
+  --color-brand-200: #abd8df;
+  --color-brand-300: #77bcc7;
+  --color-brand-400: #3f9aa8;
+  --color-brand-500: #1d7f8f;
+  --color-brand-600: #136b7a;
+  --color-brand-700: #0f5764;
+  --color-brand-800: #0c4651;
+  --color-brand-900: #0a3741;
+  --color-brand-950: #06232a;
+
+  /* Accent: warm amber used sparingly for highlights */
+  --color-accent-50: #fff7eb;
+  --color-accent-100: #feeac7;
+  --color-accent-500: #e59a1f;
+  --color-accent-600: #c47f12;
+  --color-accent-700: #9a620e;
+
+  /* Neutrals */
+  --color-ink-950: #0b1620;
+  --color-ink-900: #111f2a;
+  --color-ink-800: #1e2d39;
+  --color-ink-700: #34444f;
+  --color-ink-600: #4b5b67;
+  --color-ink-500: #66757f;
+  --color-ink-400: #8b979f;
+  --color-ink-300: #b5bec4;
+  --color-ink-200: #d6dce0;
+  --color-line: #e4e9ec;
+  --color-line-strong: #d3dade;
+  --color-surface: #f4f7f8;
+  --color-surface-2: #eaf0f2;
+
+  /* Status */
+  --color-success-700: #146c43;
+  --color-success-600: #198754;
+  --color-success-100: #d3f0e1;
+  --color-success-50: #ebf8f1;
+  --color-warning-700: #8a5508;
+  --color-warning-600: #b26b0c;
+  --color-warning-100: #fbe8c6;
+  --color-warning-50: #fff6e6;
+  --color-danger-700: #a3201b;
+  --color-danger-600: #c62a22;
+  --color-danger-100: #fbd9d6;
+  --color-danger-50: #fdeeec;
+  --color-info-700: #1f4fa3;
+  --color-info-600: #2a62c4;
+  --color-info-100: #d9e5fa;
+  --color-info-50: #eef3fd;
+  --color-violet-700: #5b3aa8;
+  --color-violet-50: #f3effc;
+
+  --shadow-card: 0 1px 2px rgb(11 22 32 / 0.04), 0 1px 3px rgb(11 22 32 / 0.04);
+  --shadow-soft: 0 1px 2px rgb(11 22 32 / 0.04), 0 12px 32px -12px rgb(11 22 32 / 0.16);
+  --shadow-lift: 0 2px 6px rgb(11 22 32 / 0.05), 0 28px 60px -24px rgb(11 22 32 / 0.3);
+  --shadow-bar: 0 -1px 0 rgb(11 22 32 / 0.06), 0 -8px 24px -12px rgb(11 22 32 / 0.18);
+
+  --ease-out-soft: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  --animate-fade-up: fade-up 0.45s var(--ease-out-soft) both;
+  --animate-fade-in: fade-in 0.25s ease-out both;
+  --animate-slide-in: slide-in 0.28s var(--ease-out-soft) both;
+  --animate-pulse-ring: pulse-ring 1.8s ease-out infinite;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-in {
+    from { transform: translateX(-100%); }
+    to { transform: none; }
+  }
+  @keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0 rgb(198 42 34 / 0.45); }
+    80%, 100% { box-shadow: 0 0 0 12px rgb(198 42 34 / 0); }
+  }
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    scroll-padding-top: 6rem;
+  }
+  body {
+    @apply bg-white font-sans text-ink-700 antialiased;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-feature-settings: "cv11", "ss01";
+    text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-display text-ink-900;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  ::selection { @apply bg-brand-100 text-brand-900; }
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  input, select, textarea, button { font: inherit; }
+  /* Prevent iOS zoom on focus: inputs are always >= 16px on small screens. */
+  @media (max-width: 640px) {
+    input, select, textarea { font-size: 16px !important; }
+  }
+  [type="number"]::-webkit-inner-spin-button { opacity: 0.4; }
+  /* Grid items default to min-width:auto, so a wide child (scrolling date
+     strip, table) can stretch the whole page on phones. Let them shrink. */
+  :where(.grid) > * { min-width: 0; }
+  summary { cursor: pointer; }
+  summary::-webkit-details-marker { display: none; }
+}
+
+/* ==========================================================================
+   Components
+   ========================================================================== */
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase text-brand-600;
+    letter-spacing: 0.12em;
+  }
+  .section {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+  .section-title {
+    @apply text-[1.75rem] font-bold leading-tight sm:text-4xl;
+    letter-spacing: -0.025em;
+  }
+  .lead {
+    @apply text-base text-ink-600 sm:text-lg;
+    line-height: 1.7;
+  }
+  .card {
+    @apply rounded-2xl border border-line bg-white shadow-card;
+  }
+  .prose-medora p { @apply mb-4 text-ink-600; line-height: 1.75; }
+  .prose-medora h2 { @apply mt-10 mb-3 text-xl font-bold sm:text-2xl; }
+  .prose-medora h3 { @apply mt-6 mb-2 text-lg font-semibold; }
+  .prose-medora ul { @apply mb-4 list-disc space-y-1.5 pl-5 text-ink-600; }
+  .prose-medora strong { @apply font-semibold text-ink-800; }
+
+  .scrollbar-none { scrollbar-width: none; }
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+  .pb-safe { padding-bottom: max(env(safe-area-inset-bottom), 0px); }
+  .tabular { font-variant-numeric: tabular-nums; }
+}
+
+/* ==========================================================================
+   Print — prescriptions, receipts and invoices
+   ========================================================================== */
+@page {
+  size: A4;
+  margin: 14mm;
+}
+
+@media print {
+  body { background: #fff !important; }
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  .print-sheet {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none !important;
+  }
+}
+.print-only { display: none; }

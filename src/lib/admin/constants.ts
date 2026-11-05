@@ -1,0 +1,20 @@
+/** Icon names understood by components/icons.tsx DepartmentIcon. */
+export const DEPARTMENT_ICON_NAMES = [
+  "HeartPulse",
+  "Brain",
+  "Bone",
+  "Baby",
+  "Venus",
+  "Ribbon",
+  "Droplets",
+  "Activity",
+  "Wind",
+  "Eye",
+  "Ear",
+  "Smile",
+  "Stethoscope",
+  "Microscope",
+  "Sparkles",
+  "Siren",
+  "HeartHandshake",
+];

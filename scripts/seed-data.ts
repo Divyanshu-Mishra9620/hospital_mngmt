@@ -1,0 +1,1185 @@
+/* Static reference data for the seed script. All people and organisations are fictional. */
+
+export const DEPARTMENTS = [
+  {
+    slug: "cardiology",
+    name: "Cardiology & Cardiac Sciences",
+    icon: "HeartPulse",
+    location: "Block A, 2nd floor",
+    extension: "2210",
+    summary: "Interventional cardiology, heart failure care and cardiac surgery under one roof.",
+    description:
+      "Our heart team combines interventional cardiologists, cardiac surgeons, electrophysiologists and cardiac rehabilitation specialists. The 24×7 cath lab supports primary angioplasty for heart attacks with a door-to-balloon time well under the international benchmark.",
+    services: "Coronary angiography & angioplasty, Pacemaker & ICD implantation, Heart failure clinic, 2D echo & TMT, Bypass surgery (CABG), Valve repair & replacement, Cardiac rehabilitation",
+  },
+  {
+    slug: "neurology",
+    name: "Neurology & Neurosurgery",
+    icon: "Brain",
+    location: "Block A, 3rd floor",
+    extension: "2310",
+    summary: "Stroke, epilepsy, movement disorders and minimally invasive brain & spine surgery.",
+    description:
+      "A certified stroke-ready unit with a dedicated neuro-ICU, EEG and nerve-conduction labs, and a neurosurgery team experienced in endoscopic and microscopic brain and spine procedures.",
+    services: "Acute stroke thrombolysis, Epilepsy clinic, Headache & migraine clinic, Parkinson's & movement disorders, Spine surgery, Brain tumour surgery, EEG / EMG / NCV",
+  },
+  {
+    slug: "orthopaedics",
+    name: "Orthopaedics & Joint Replacement",
+    icon: "Bone",
+    location: "Block B, Ground floor",
+    extension: "1120",
+    summary: "Joint replacement, arthroscopy, sports injuries and complex trauma.",
+    description:
+      "From fracture care to robotic-assisted knee and hip replacement, our orthopaedic surgeons and physiotherapists work together to get you moving again with shorter hospital stays.",
+    services: "Total knee & hip replacement, Arthroscopy & sports medicine, Spine care, Fracture & trauma surgery, Paediatric orthopaedics, Physiotherapy & rehabilitation",
+  },
+  {
+    slug: "paediatrics",
+    name: "Paediatrics & Neonatology",
+    icon: "Baby",
+    location: "Block C, 1st floor",
+    extension: "3110",
+    summary: "Child health from newborn intensive care to adolescent medicine.",
+    description:
+      "A 30-bed Level III NICU, a paediatric ICU and child-friendly OPDs. Our paediatricians run well-baby clinics, vaccination programmes and sub-speciality clinics for growth, allergy and development.",
+    services: "Level III NICU, Paediatric ICU, Vaccination clinic, Growth & development clinic, Paediatric allergy & asthma, Adolescent health",
+  },
+  {
+    slug: "obstetrics-gynaecology",
+    name: "Obstetrics & Gynaecology",
+    icon: "Venus",
+    location: "Block C, 2nd floor",
+    extension: "3210",
+    summary: "Pregnancy care, high-risk obstetrics, fertility and laparoscopic gynaecology.",
+    description:
+      "Comfortable birthing suites, round-the-clock obstetricians and anaesthetists, and a high-risk pregnancy unit backed by our NICU. Our gynaecologists offer minimally invasive surgery and fertility services.",
+    services: "Antenatal care, High-risk pregnancy, Normal & painless delivery, Laparoscopic gynaec surgery, Fertility & IVF counselling, Menopause clinic",
+  },
+  {
+    slug: "oncology",
+    name: "Oncology (Cancer Care)",
+    icon: "Ribbon",
+    location: "Block D, 1st floor",
+    extension: "4110",
+    summary: "Medical, surgical and radiation oncology with tumour-board planning.",
+    description:
+      "Every new cancer case is discussed at a weekly multidisciplinary tumour board. Day-care chemotherapy, targeted therapy, immunotherapy and onco-surgery are coordinated by a dedicated nurse navigator.",
+    services: "Chemotherapy day care, Immunotherapy & targeted therapy, Onco-surgery, Breast cancer clinic, Palliative care, Cancer screening",
+  },
+  {
+    slug: "nephrology",
+    name: "Nephrology & Urology",
+    icon: "Droplets",
+    location: "Block B, 2nd floor",
+    extension: "1210",
+    summary: "Kidney care, dialysis and endo-urology for stones and prostate conditions.",
+    description:
+      "A 20-station haemodialysis unit open 24×7, kidney transplant work-up and laser-based endo-urology for kidney stones and prostate enlargement.",
+    services: "Haemodialysis & peritoneal dialysis, Kidney transplant work-up, Laser stone surgery (RIRS, PCNL), Prostate care, Chronic kidney disease clinic",
+  },
+  {
+    slug: "gastroenterology",
+    name: "Gastroenterology & Hepatology",
+    icon: "Microscope",
+    location: "Block B, 3rd floor",
+    extension: "1310",
+    summary: "Endoscopy, liver disease and digestive surgery.",
+    description:
+      "Advanced endoscopy suite for diagnostic and therapeutic procedures including ERCP and EUS, with a hepatology clinic for fatty liver, hepatitis and cirrhosis.",
+    services: "Upper GI endoscopy & colonoscopy, ERCP & EUS, Fatty liver clinic, Hepatitis B & C care, IBD clinic, Laparoscopic GI surgery",
+  },
+  {
+    slug: "pulmonology",
+    name: "Pulmonology & Sleep Medicine",
+    icon: "Wind",
+    location: "Block A, 1st floor",
+    extension: "2110",
+    summary: "Asthma, COPD, TB, interstitial lung disease and sleep studies.",
+    description:
+      "Complete pulmonary function lab, bronchoscopy and an overnight sleep-study suite for snoring and sleep apnoea.",
+    services: "Asthma & COPD clinic, Pulmonary function tests, Bronchoscopy, Sleep study (polysomnography), TB & chest infections, Pulmonary rehabilitation",
+  },
+  {
+    slug: "endocrinology",
+    name: "Endocrinology & Diabetes",
+    icon: "Activity",
+    location: "Block A, Ground floor",
+    extension: "2010",
+    summary: "Diabetes, thyroid, obesity and hormone disorders.",
+    description:
+      "A comprehensive diabetes centre with educators, dietitians and a foot-care clinic, alongside specialist care for thyroid, adrenal, pituitary and bone-metabolism disorders.",
+    services: "Diabetes care & insulin pump clinic, Thyroid clinic, Obesity & metabolic clinic, Diabetic foot care, PCOS & hormone clinic, Osteoporosis",
+  },
+  {
+    slug: "dermatology",
+    name: "Dermatology & Cosmetology",
+    icon: "Sparkles",
+    location: "Block D, Ground floor",
+    extension: "4010",
+    summary: "Skin, hair and nail conditions with modern dermatological procedures.",
+    description:
+      "Treatment for acne, eczema, psoriasis and infections, plus procedures such as chemical peels, laser therapy and minor skin surgery.",
+    services: "Acne & scar care, Psoriasis & eczema, Hair loss clinic, Laser therapy, Chemical peels, Skin biopsy & minor surgery",
+  },
+  {
+    slug: "ent",
+    name: "ENT & Head-Neck Surgery",
+    icon: "Ear",
+    location: "Block D, 2nd floor",
+    extension: "4210",
+    summary: "Ear, nose and throat care including endoscopic sinus surgery and hearing tests.",
+    description:
+      "Audiology and speech therapy services, endoscopic sinus and skull-base surgery, and a voice clinic for professional voice users.",
+    services: "Endoscopic sinus surgery, Audiometry & hearing aids, Tonsil & adenoid surgery, Voice clinic, Vertigo clinic, Head & neck surgery",
+  },
+  {
+    slug: "ophthalmology",
+    name: "Ophthalmology",
+    icon: "Eye",
+    location: "Block D, 3rd floor",
+    extension: "4310",
+    summary: "Cataract, retina, glaucoma and vision correction.",
+    description:
+      "Same-day micro-incision cataract surgery, diabetic retinopathy screening and LASIK assessment with modern diagnostics.",
+    services: "Cataract surgery, Retina & diabetic eye care, Glaucoma clinic, LASIK assessment, Paediatric ophthalmology, Contact lens clinic",
+  },
+  {
+    slug: "dental",
+    name: "Dental Sciences",
+    icon: "Smile",
+    location: "Block D, Ground floor",
+    extension: "4020",
+    summary: "General, cosmetic and surgical dentistry for all ages.",
+    description:
+      "Root canal treatment, implants, orthodontics and children's dentistry with digital X-rays and sterilisation to hospital standards.",
+    services: "Root canal treatment, Dental implants, Braces & aligners, Paediatric dentistry, Wisdom tooth surgery, Teeth cleaning & whitening",
+  },
+  {
+    slug: "internal-medicine",
+    name: "Internal Medicine",
+    icon: "Stethoscope",
+    location: "Block A, Ground floor",
+    extension: "2020",
+    summary: "Your first stop for fevers, infections, BP, sugar and preventive health.",
+    description:
+      "Our physicians manage acute illnesses and long-term conditions, coordinate care across specialities and run the executive health-check programme.",
+    services: "Fever & infections, Hypertension & diabetes, Preventive health checks, Geriatric care, Vaccination for adults, Second opinions",
+  },
+  {
+    slug: "psychiatry",
+    name: "Psychiatry & Mental Health",
+    icon: "HeartHandshake",
+    location: "Block C, Ground floor",
+    extension: "3010",
+    summary: "Confidential care for anxiety, depression, sleep and addiction.",
+    description:
+      "Psychiatrists and clinical psychologists offering therapy, medication management and de-addiction support in a private, judgement-free setting.",
+    services: "Anxiety & depression, Counselling & psychotherapy, Sleep disorders, De-addiction, Child & adolescent mental health, Stress management",
+  },
+] as const;
+
+type Sched = { days: number[]; start: string; end: string; mode?: "both" | "in_person" | "video" }[];
+
+const MON_SAT = [1, 2, 3, 4, 5, 6];
+const MWF = [1, 3, 5];
+const TTS = [2, 4, 6];
+const MON_FRI = [1, 2, 3, 4, 5];
+
+export const DOCTORS: {
+  code: string;
+  name: string;
+  email: string;
+  dept: string;
+  designation: string;
+  qualifications: string;
+  experience: number;
+  languages: string;
+  expertise: string;
+  bio: string;
+  room: string;
+  color: string;
+  slot: number;
+  schedule: Sched;
+}[] = [
+  {
+    code: "DOC-1001",
+    name: "Dr. Ananya Rao",
+    email: "ananya.rao@medorahospital.in",
+    dept: "cardiology",
+    designation: "Senior Consultant & Head — Interventional Cardiology",
+    qualifications: "MBBS, MD (Medicine), DM (Cardiology), FESC",
+    experience: 18,
+    languages: "English, Hindi, Kannada, Telugu",
+    expertise: "Complex angioplasty, Heart failure, Preventive cardiology, Women's heart health",
+    bio: "Dr. Ananya Rao has performed more than 6,000 coronary interventions and leads the hospital's primary angioplasty programme. She has a special interest in heart disease in women and in preventive cardiology for people with diabetes.",
+    room: "A-204",
+    color: "#b4405a",
+    slot: 15,
+    schedule: [
+      { days: MON_SAT, start: "09:30", end: "13:30" },
+      { days: MON_FRI, start: "17:00", end: "19:00", mode: "video" },
+    ],
+  },
+  {
+    code: "DOC-1002",
+    name: "Dr. Vikram Sethi",
+    email: "vikram.sethi@medorahospital.in",
+    dept: "cardiology",
+    designation: "Consultant — Cardiothoracic & Vascular Surgery",
+    qualifications: "MBBS, MS (General Surgery), MCh (CTVS)",
+    experience: 15,
+    languages: "English, Hindi, Punjabi",
+    expertise: "Beating-heart bypass surgery, Valve repair, Minimally invasive cardiac surgery",
+    bio: "Dr. Vikram Sethi specialises in off-pump coronary bypass and valve repair surgery, with a focus on faster recovery through minimally invasive techniques.",
+    room: "A-212",
+    color: "#7a3e9d",
+    slot: 20,
+    schedule: [{ days: TTS, start: "10:00", end: "14:00" }],
+  },
+  {
+    code: "DOC-1003",
+    name: "Dr. Meera Iyer",
+    email: "meera.iyer@medorahospital.in",
+    dept: "neurology",
+    designation: "Senior Consultant — Neurology",
+    qualifications: "MBBS, MD (Medicine), DM (Neurology)",
+    experience: 16,
+    languages: "English, Hindi, Tamil, Malayalam",
+    expertise: "Stroke, Epilepsy, Migraine, Movement disorders",
+    bio: "Dr. Meera Iyer leads the stroke-response team and runs dedicated epilepsy and headache clinics. She has trained in movement disorders and botulinum toxin therapy.",
+    room: "A-305",
+    color: "#2f6fb0",
+    slot: 20,
+    schedule: [
+      { days: MON_SAT, start: "10:00", end: "13:00" },
+      { days: MWF, start: "17:00", end: "18:30", mode: "video" },
+    ],
+  },
+  {
+    code: "DOC-1004",
+    name: "Dr. Arjun Khanna",
+    email: "arjun.khanna@medorahospital.in",
+    dept: "neurology",
+    designation: "Consultant — Neurosurgery & Spine",
+    qualifications: "MBBS, MS, MCh (Neurosurgery)",
+    experience: 12,
+    languages: "English, Hindi",
+    expertise: "Minimally invasive spine surgery, Brain tumours, Neuro-trauma",
+    bio: "Dr. Arjun Khanna performs endoscopic and microscopic spine surgery and brain tumour resections, and is part of the 24×7 neuro-trauma team.",
+    room: "A-310",
+    color: "#356c63",
+    slot: 20,
+    schedule: [{ days: MWF, start: "11:00", end: "14:00" }],
+  },
+  {
+    code: "DOC-1005",
+    name: "Dr. Rohan Desai",
+    email: "rohan.desai@medorahospital.in",
+    dept: "orthopaedics",
+    designation: "Director — Joint Replacement Surgery",
+    qualifications: "MBBS, MS (Ortho), Fellowship in Arthroplasty (UK)",
+    experience: 20,
+    languages: "English, Hindi, Marathi, Gujarati",
+    expertise: "Robotic knee replacement, Hip replacement, Revision arthroplasty",
+    bio: "Dr. Rohan Desai has performed over 8,000 joint replacements and introduced robotic-assisted knee replacement at Medora. He is known for rapid-recovery protocols that get most patients walking within a day.",
+    room: "B-012",
+    color: "#a05a1c",
+    slot: 15,
+    schedule: [
+      { days: MON_SAT, start: "09:00", end: "12:30" },
+      { days: [2, 4], start: "17:30", end: "19:00", mode: "video" },
+    ],
+  },
+  {
+    code: "DOC-1006",
+    name: "Dr. Kavita Nair",
+    email: "kavita.nair@medorahospital.in",
+    dept: "orthopaedics",
+    designation: "Consultant — Arthroscopy & Sports Medicine",
+    qualifications: "MBBS, DNB (Ortho), Fellowship in Sports Medicine",
+    experience: 10,
+    languages: "English, Hindi, Malayalam",
+    expertise: "ACL reconstruction, Shoulder arthroscopy, Sports injuries",
+    bio: "Dr. Kavita Nair treats athletes and active adults with ligament, cartilage and shoulder injuries using keyhole surgery and structured rehabilitation.",
+    room: "B-018",
+    color: "#1f7f8e",
+    slot: 15,
+    schedule: [
+      { days: MON_FRI, start: "14:00", end: "17:00" },
+      { days: [6], start: "10:00", end: "13:00" },
+    ],
+  },
+  {
+    code: "DOC-1007",
+    name: "Dr. Sneha Kulkarni",
+    email: "sneha.kulkarni@medorahospital.in",
+    dept: "paediatrics",
+    designation: "Senior Consultant — Paediatrics",
+    qualifications: "MBBS, MD (Paediatrics), IAP Fellowship in Allergy",
+    experience: 14,
+    languages: "English, Hindi, Marathi, Kannada",
+    expertise: "Childhood asthma & allergy, Growth & nutrition, Vaccination",
+    bio: "Dr. Sneha Kulkarni runs the paediatric allergy and asthma clinic and the well-baby programme, with a gentle approach that children and parents appreciate.",
+    room: "C-104",
+    color: "#c2416b",
+    slot: 15,
+    schedule: [
+      { days: MON_SAT, start: "09:30", end: "13:00" },
+      { days: MON_FRI, start: "18:00", end: "19:30", mode: "video" },
+    ],
+  },
+  {
+    code: "DOC-1008",
+    name: "Dr. Imran Qureshi",
+    email: "imran.qureshi@medorahospital.in",
+    dept: "paediatrics",
+    designation: "Consultant — Neonatology",
+    qualifications: "MBBS, MD (Paediatrics), DM (Neonatology)",
+    experience: 11,
+    languages: "English, Hindi, Urdu",
+    expertise: "Premature babies, Newborn jaundice, Breastfeeding support",
+    bio: "Dr. Imran Qureshi leads the Level III NICU and follows up premature babies through their first two years with a developmental clinic.",
+    room: "C-112",
+    color: "#2c7a4b",
+    slot: 20,
+    schedule: [{ days: TTS, start: "14:00", end: "17:00" }],
+  },
+  {
+    code: "DOC-1009",
+    name: "Dr. Priya Menon",
+    email: "priya.menon@medorahospital.in",
+    dept: "obstetrics-gynaecology",
+    designation: "Senior Consultant — Obstetrics & Gynaecology",
+    qualifications: "MBBS, MS (OBG), FRCOG",
+    experience: 19,
+    languages: "English, Hindi, Malayalam, Tamil",
+    expertise: "High-risk pregnancy, Painless delivery, Laparoscopic hysterectomy",
+    bio: "Dr. Priya Menon has supported more than 10,000 births and leads the high-risk pregnancy unit. She performs advanced laparoscopic gynaecological surgery.",
+    room: "C-204",
+    color: "#9c3d7c",
+    slot: 15,
+    schedule: [
+      { days: MON_SAT, start: "10:00", end: "13:30" },
+      { days: MWF, start: "17:00", end: "18:30", mode: "video" },
+    ],
+  },
+  {
+    code: "DOC-1010",
+    name: "Dr. Farah Siddiqui",
+    email: "farah.siddiqui@medorahospital.in",
+    dept: "obstetrics-gynaecology",
+    designation: "Consultant — Reproductive Medicine",
+    qualifications: "MBBS, DGO, DNB (OBG), Fellowship in Reproductive Medicine",
+    experience: 9,
+    languages: "English, Hindi, Urdu",
+    expertise: "Infertility, PCOS, Recurrent pregnancy loss",
+    bio: "Dr. Farah Siddiqui counsels couples on fertility and manages PCOS and hormonal disorders, with a focus on evidence-based, affordable treatment.",
+    room: "C-210",
+    color: "#5b4fb0",
+    slot: 20,
+    schedule: [{ days: MON_FRI, start: "14:30", end: "17:30" }],
+  },
+  {
+    code: "DOC-1011",
+    name: "Dr. Sanjay Gupta",
+    email: "sanjay.gupta@medorahospital.in",
+    dept: "oncology",
+    designation: "Senior Consultant — Medical Oncology",
+    qualifications: "MBBS, MD (Medicine), DM (Medical Oncology)",
+    experience: 17,
+    languages: "English, Hindi, Bengali",
+    expertise: "Breast, lung and GI cancers, Immunotherapy, Targeted therapy",
+    bio: "Dr. Sanjay Gupta chairs the hospital tumour board and has been an investigator in several international cancer trials.",
+    room: "D-104",
+    color: "#7c4a2d",
+    slot: 20,
+    schedule: [
+      { days: MON_SAT, start: "10:00", end: "13:00" },
+      { days: [2, 4], start: "17:00", end: "18:30", mode: "video" },
+    ],
+  },
+  {
+    code: "DOC-1012",
+    name: "Dr. Aditya Bhat",
+    email: "aditya.bhat@medorahospital.in",
+    dept: "nephrology",
+    designation: "Consultant — Nephrology",
+    qualifications: "MBBS, MD (Medicine), DM (Nephrology)",
+    experience: 13,
+    languages: "English, Hindi, Kannada, Konkani",
+    expertise: "Chronic kidney disease, Dialysis, Kidney transplant",
+    bio: "Dr. Aditya Bhat manages the dialysis unit and the kidney-transplant programme, and runs a CKD clinic focused on slowing disease progression.",
+    room: "B-206",
+    color: "#2563a8",
+    slot: 15,
+    schedule: [{ days: MON_SAT, start: "09:00", end: "12:00" }],
+  },
+  {
+    code: "DOC-1013",
+    name: "Dr. Nikhil Joshi",
+    email: "nikhil.joshi@medorahospital.in",
+    dept: "gastroenterology",
+    designation: "Consultant — Gastroenterology & Hepatology",
+    qualifications: "MBBS, MD, DM (Gastroenterology)",
+    experience: 12,
+    languages: "English, Hindi, Marathi",
+    expertise: "Therapeutic endoscopy, Fatty liver, IBD, Hepatitis",
+    bio: "Dr. Nikhil Joshi performs advanced endoscopy including ERCP and EUS and runs the fatty liver clinic.",
+    room: "B-304",
+    color: "#3f7d2a",
+    slot: 15,
+    schedule: [
+      { days: MON_FRI, start: "15:00", end: "18:00" },
+      { days: [6], start: "10:00", end: "12:00", mode: "video" },
+    ],
+  },
+  {
+    code: "DOC-1014",
+    name: "Dr. Lakshmi Subramanian",
+    email: "lakshmi.s@medorahospital.in",
+    dept: "pulmonology",
+    designation: "Consultant — Pulmonology & Sleep Medicine",
+    qualifications: "MBBS, MD (Respiratory Medicine), Fellowship in Sleep Medicine",
+    experience: 15,
+    languages: "English, Hindi, Tamil",
+    expertise: "Asthma, COPD, Sleep apnoea, Interstitial lung disease",
+    bio: "Dr. Lakshmi Subramanian heads the pulmonary function and sleep laboratory and manages complex asthma and interstitial lung disease.",
+    room: "A-106",
+    color: "#2f7f78",
+    slot: 15,
+    schedule: [
+      { days: MON_SAT, start: "09:30", end: "12:30" },
+      { days: MWF, start: "18:00", end: "19:30", mode: "video" },
+    ],
+  },
+  {
+    code: "DOC-1015",
+    name: "Dr. Rajesh Agarwal",
+    email: "rajesh.agarwal@medorahospital.in",
+    dept: "endocrinology",
+    designation: "Senior Consultant — Endocrinology & Diabetes",
+    qualifications: "MBBS, MD (Medicine), DM (Endocrinology)",
+    experience: 21,
+    languages: "English, Hindi, Marwari",
+    expertise: "Type 1 & 2 diabetes, Insulin pumps, Thyroid, Obesity",
+    bio: "Dr. Rajesh Agarwal founded the Medora Diabetes Centre. He combines medication with structured nutrition and lifestyle programmes and has a large tele-consultation practice.",
+    room: "A-014",
+    color: "#a34a28",
+    slot: 15,
+    schedule: [
+      { days: MON_SAT, start: "09:00", end: "13:00" },
+      { days: MON_SAT, start: "16:00", end: "19:00", mode: "video" },
+    ],
+  },
+  {
+    code: "DOC-1016",
+    name: "Dr. Tanvi Shah",
+    email: "tanvi.shah@medorahospital.in",
+    dept: "dermatology",
+    designation: "Consultant — Dermatology",
+    qualifications: "MBBS, MD (Dermatology, Venereology & Leprosy)",
+    experience: 8,
+    languages: "English, Hindi, Gujarati",
+    expertise: "Acne & scars, Psoriasis, Hair loss, Lasers",
+    bio: "Dr. Tanvi Shah treats medical and cosmetic skin concerns and has a special interest in acne scarring and pigmentation.",
+    room: "D-006",
+    color: "#b05a8f",
+    slot: 15,
+    schedule: [
+      { days: MON_SAT, start: "11:00", end: "14:00" },
+      { days: [2, 4, 6], start: "17:00", end: "19:00", mode: "video" },
+    ],
+  },
+  {
+    code: "DOC-1017",
+    name: "Dr. Harish Reddy",
+    email: "harish.reddy@medorahospital.in",
+    dept: "ent",
+    designation: "Consultant — ENT & Head-Neck Surgery",
+    qualifications: "MBBS, MS (ENT), DNB",
+    experience: 14,
+    languages: "English, Hindi, Telugu, Kannada",
+    expertise: "Endoscopic sinus surgery, Vertigo, Voice disorders",
+    bio: "Dr. Harish Reddy performs endoscopic sinus and skull-base surgery and runs the vertigo clinic with the audiology team.",
+    room: "D-206",
+    color: "#46638f",
+    slot: 15,
+    schedule: [{ days: MON_SAT, start: "10:00", end: "13:30" }],
+  },
+  {
+    code: "DOC-1018",
+    name: "Dr. Sunita Pillai",
+    email: "sunita.pillai@medorahospital.in",
+    dept: "ophthalmology",
+    designation: "Consultant — Ophthalmology (Cataract & Retina)",
+    qualifications: "MBBS, MS (Ophthalmology), FICO",
+    experience: 16,
+    languages: "English, Hindi, Malayalam",
+    expertise: "Micro-incision cataract surgery, Diabetic retinopathy, Glaucoma",
+    bio: "Dr. Sunita Pillai has performed over 15,000 cataract surgeries and leads diabetic eye screening for the diabetes centre.",
+    room: "D-304",
+    color: "#0f6d8c",
+    slot: 15,
+    schedule: [{ days: MON_FRI, start: "09:30", end: "13:00" }],
+  },
+  {
+    code: "DOC-1019",
+    name: "Dr. Karan Malhotra",
+    email: "karan.malhotra@medorahospital.in",
+    dept: "dental",
+    designation: "Consultant — Prosthodontics & Implantology",
+    qualifications: "BDS, MDS (Prosthodontics)",
+    experience: 10,
+    languages: "English, Hindi, Punjabi",
+    expertise: "Dental implants, Root canal treatment, Smile design",
+    bio: "Dr. Karan Malhotra places dental implants and full-mouth rehabilitations using digital planning.",
+    room: "D-012",
+    color: "#527a2f",
+    slot: 30,
+    schedule: [{ days: MON_SAT, start: "10:00", end: "14:00", mode: "in_person" }],
+  },
+  {
+    code: "DOC-1020",
+    name: "Dr. Deepak Chawla",
+    email: "deepak.chawla@medorahospital.in",
+    dept: "internal-medicine",
+    designation: "Senior Consultant — Internal Medicine",
+    qualifications: "MBBS, MD (Internal Medicine)",
+    experience: 22,
+    languages: "English, Hindi, Punjabi",
+    expertise: "Fever & infections, Hypertension, Diabetes, Preventive health",
+    bio: "Dr. Deepak Chawla is a senior physician known for thorough evaluation of complex, multi-system illness and for coordinating care across specialities.",
+    room: "A-020",
+    color: "#195f87",
+    slot: 15,
+    schedule: [
+      { days: MON_SAT, start: "09:00", end: "13:00" },
+      { days: MON_SAT, start: "17:00", end: "19:00" },
+    ],
+  },
+  {
+    code: "DOC-1021",
+    name: "Dr. Asha Fernandes",
+    email: "asha.fernandes@medorahospital.in",
+    dept: "internal-medicine",
+    designation: "Consultant — Internal Medicine & Geriatrics",
+    qualifications: "MBBS, MD (Medicine), PG Diploma in Geriatric Medicine",
+    experience: 11,
+    languages: "English, Hindi, Konkani, Kannada",
+    expertise: "Elderly care, Thyroid, Infections, Adult vaccination",
+    bio: "Dr. Asha Fernandes looks after older adults and families, with a preventive approach that includes vaccination and regular health checks.",
+    room: "A-022",
+    color: "#8a4f9e",
+    slot: 15,
+    schedule: [
+      { days: MON_SAT, start: "13:30", end: "16:30" },
+      { days: MON_SAT, start: "19:00", end: "20:30", mode: "video" },
+    ],
+  },
+  {
+    code: "DOC-1022",
+    name: "Dr. Neha Bansal",
+    email: "neha.bansal@medorahospital.in",
+    dept: "psychiatry",
+    designation: "Consultant — Psychiatry",
+    qualifications: "MBBS, MD (Psychiatry)",
+    experience: 9,
+    languages: "English, Hindi",
+    expertise: "Anxiety, Depression, Sleep, De-addiction",
+    bio: "Dr. Neha Bansal offers confidential consultations for adults and adolescents, combining medication where needed with evidence-based psychotherapy.",
+    room: "C-008",
+    color: "#4f6b9e",
+    slot: 30,
+    schedule: [
+      { days: MON_FRI, start: "11:00", end: "14:00" },
+      { days: MON_SAT, start: "17:00", end: "20:00", mode: "video" },
+    ],
+  },
+];
+
+export type MedSeed = {
+  sku: string;
+  name: string;
+  generic: string;
+  mfr: string;
+  category: string;
+  form: "tablet" | "capsule" | "syrup" | "suspension" | "injection" | "ointment" | "cream" | "drops" | "inhaler" | "sachet" | "gel" | "device";
+  strength?: string;
+  unit: string;
+  price: number;
+  rx: boolean;
+  reorder: number;
+  rack: string;
+  /** Total opening stock spread across batches. */
+  stock: number;
+};
+
+const MFR = ["Medora Generics", "Sunveda Pharma", "Zenlife Labs", "Arogen Healthcare", "Novacure Pharma", "Healix Biotech", "Crescent Remedies"];
+let mi = 0;
+const m = (
+  name: string,
+  generic: string,
+  category: string,
+  form: MedSeed["form"],
+  strength: string | undefined,
+  unit: string,
+  price: number,
+  rx: boolean,
+  stock: number,
+  reorder = 100,
+): MedSeed => {
+  mi++;
+  return {
+    sku: `MED-${String(mi).padStart(4, "0")}`,
+    name,
+    generic,
+    mfr: MFR[mi % MFR.length],
+    category,
+    form,
+    strength,
+    unit,
+    price,
+    rx,
+    reorder,
+    rack: `${String.fromCharCode(65 + (mi % 6))}-${(mi % 12) + 1}`,
+    stock,
+  };
+};
+
+export const MEDICINES: MedSeed[] = [
+  // Pain & fever
+  m("Paracetamol 650 mg", "Paracetamol", "Analgesic & antipyretic", "tablet", "650 mg", "tablet", 2.1, false, 2400, 300),
+  m("Ibuprofen 400 mg", "Ibuprofen", "Analgesic (NSAID)", "tablet", "400 mg", "tablet", 1.8, false, 900),
+  m("Diclofenac 50 mg", "Diclofenac sodium", "Analgesic (NSAID)", "tablet", "50 mg", "tablet", 1.6, true, 600),
+  m("Aceclofenac + Paracetamol", "Aceclofenac 100 mg + Paracetamol 325 mg", "Analgesic (NSAID)", "tablet", "100/325 mg", "tablet", 4.2, true, 750),
+  m("Tramadol 50 mg", "Tramadol hydrochloride", "Analgesic (opioid)", "capsule", "50 mg", "capsule", 5.5, true, 180, 60),
+  // Antibiotics
+  m("Amoxicillin 500 mg", "Amoxicillin", "Antibiotic", "capsule", "500 mg", "capsule", 6.5, true, 800),
+  m("Amoxicillin + Clavulanate 625 mg", "Amoxicillin 500 mg + Clavulanic acid 125 mg", "Antibiotic", "tablet", "625 mg", "tablet", 18.5, true, 640),
+  m("Azithromycin 500 mg", "Azithromycin", "Antibiotic", "tablet", "500 mg", "tablet", 22, true, 330),
+  m("Cefixime 200 mg", "Cefixime", "Antibiotic", "tablet", "200 mg", "tablet", 11, true, 420),
+  m("Ciprofloxacin 500 mg", "Ciprofloxacin", "Antibiotic", "tablet", "500 mg", "tablet", 5, true, 380),
+  m("Doxycycline 100 mg", "Doxycycline", "Antibiotic", "capsule", "100 mg", "capsule", 4.5, true, 260),
+  m("Metronidazole 400 mg", "Metronidazole", "Antibiotic / antiprotozoal", "tablet", "400 mg", "tablet", 2, true, 500),
+  // Diabetes
+  m("Metformin 500 mg SR", "Metformin hydrochloride (sustained release)", "Antidiabetic", "tablet", "500 mg", "tablet", 2.2, true, 3000, 400),
+  m("Metformin 1000 mg SR", "Metformin hydrochloride (sustained release)", "Antidiabetic", "tablet", "1000 mg", "tablet", 3.6, true, 1800, 300),
+  m("Glimepiride 2 mg", "Glimepiride", "Antidiabetic", "tablet", "2 mg", "tablet", 4, true, 1200, 200),
+  m("Sitagliptin 100 mg", "Sitagliptin", "Antidiabetic (DPP-4 inhibitor)", "tablet", "100 mg", "tablet", 38, true, 420),
+  m("Vildagliptin 50 mg", "Vildagliptin", "Antidiabetic (DPP-4 inhibitor)", "tablet", "50 mg", "tablet", 16, true, 560),
+  m("Dapagliflozin 10 mg", "Dapagliflozin", "Antidiabetic (SGLT2 inhibitor)", "tablet", "10 mg", "tablet", 32, true, 75, 120),
+  m("Insulin Glargine 100 IU/ml pen", "Insulin glargine", "Insulin", "injection", "100 IU/ml · 3 ml", "pen", 850, true, 48, 20),
+  // Cardiac
+  m("Amlodipine 5 mg", "Amlodipine", "Antihypertensive", "tablet", "5 mg", "tablet", 2.5, true, 2200, 300),
+  m("Telmisartan 40 mg", "Telmisartan", "Antihypertensive", "tablet", "40 mg", "tablet", 5, true, 1900, 300),
+  m("Losartan 50 mg", "Losartan potassium", "Antihypertensive", "tablet", "50 mg", "tablet", 4, true, 900),
+  m("Atorvastatin 10 mg", "Atorvastatin", "Lipid-lowering (statin)", "tablet", "10 mg", "tablet", 6, true, 1500, 200),
+  m("Atorvastatin 20 mg", "Atorvastatin", "Lipid-lowering (statin)", "tablet", "20 mg", "tablet", 9.5, true, 1100, 200),
+  m("Rosuvastatin 10 mg", "Rosuvastatin", "Lipid-lowering (statin)", "tablet", "10 mg", "tablet", 12, true, 860),
+  m("Aspirin 75 mg", "Acetylsalicylic acid (low dose)", "Antiplatelet", "tablet", "75 mg", "tablet", 0.9, true, 2600, 300),
+  m("Clopidogrel 75 mg", "Clopidogrel", "Antiplatelet", "tablet", "75 mg", "tablet", 6, true, 980),
+  m("Metoprolol 25 mg XL", "Metoprolol succinate (extended release)", "Beta blocker", "tablet", "25 mg", "tablet", 4.2, true, 1200),
+  m("Bisoprolol 5 mg", "Bisoprolol fumarate", "Beta blocker", "tablet", "5 mg", "tablet", 5.5, true, 0, 150),
+  m("Ramipril 5 mg", "Ramipril", "ACE inhibitor", "capsule", "5 mg", "capsule", 7, true, 520),
+  m("Furosemide 40 mg", "Furosemide", "Diuretic", "tablet", "40 mg", "tablet", 1.5, true, 640),
+  // GI
+  m("Pantoprazole 40 mg", "Pantoprazole", "Antacid (PPI)", "tablet", "40 mg", "tablet", 5.5, true, 2800, 300),
+  m("Rabeprazole 20 mg", "Rabeprazole", "Antacid (PPI)", "tablet", "20 mg", "tablet", 6, true, 1100),
+  m("Ondansetron 4 mg", "Ondansetron", "Anti-emetic", "tablet", "4 mg", "tablet", 4, true, 700),
+  m("Domperidone 10 mg", "Domperidone", "Prokinetic", "tablet", "10 mg", "tablet", 2.5, true, 600),
+  m("Oral Rehydration Salts", "WHO-ORS (low osmolarity)", "Electrolyte replacement", "sachet", "21.8 g", "sachet", 22, false, 380, 80),
+  m("Lactulose Solution 100 ml", "Lactulose", "Laxative", "syrup", "10 g/15 ml", "100 ml bottle", 160, false, 64, 25),
+  m("Probiotic Capsules", "Lactobacillus & Bifidobacterium blend", "Probiotic", "capsule", "5 billion CFU", "capsule", 15, false, 420),
+  // Respiratory & allergy
+  m("Montelukast + Levocetirizine", "Montelukast 10 mg + Levocetirizine 5 mg", "Anti-allergic", "tablet", "10/5 mg", "tablet", 9, true, 1400, 200),
+  m("Cetirizine 10 mg", "Cetirizine", "Antihistamine", "tablet", "10 mg", "tablet", 1.5, false, 1600, 200),
+  m("Salbutamol Inhaler 100 mcg", "Salbutamol", "Bronchodilator", "inhaler", "100 mcg/dose · 200 doses", "inhaler", 165, true, 72, 25),
+  m("Budesonide + Formoterol Inhaler", "Budesonide 200 mcg + Formoterol 6 mcg", "Inhaled steroid + bronchodilator", "inhaler", "200/6 mcg · 120 doses", "inhaler", 520, true, 18, 25),
+  m("Ambroxol Syrup 100 ml", "Ambroxol hydrochloride", "Mucolytic", "syrup", "30 mg/5 ml", "100 ml bottle", 95, false, 120, 30),
+  m("Dextromethorphan Cough Syrup 100 ml", "Dextromethorphan + Chlorpheniramine", "Cough suppressant", "syrup", "10 mg/5 ml", "100 ml bottle", 110, true, 90, 30),
+  // Vitamins & supplements
+  m("Vitamin D3 60,000 IU", "Cholecalciferol", "Vitamin", "capsule", "60,000 IU", "capsule", 30, true, 520),
+  m("Calcium + Vitamin D3", "Calcium carbonate 500 mg + Vitamin D3 250 IU", "Supplement", "tablet", "500 mg", "tablet", 6, false, 2000, 250),
+  m("Methylcobalamin 1500 mcg", "Methylcobalamin (Vitamin B12)", "Vitamin", "tablet", "1500 mcg", "tablet", 8, false, 900),
+  m("Iron + Folic Acid", "Ferrous ascorbate 100 mg + Folic acid 1.5 mg", "Haematinic", "tablet", "100 mg", "tablet", 3, false, 1300, 200),
+  m("Multivitamin & Minerals", "Multivitamin with zinc & selenium", "Supplement", "tablet", undefined, "tablet", 7, false, 1100),
+  m("Omega-3 Fatty Acids 1000 mg", "EPA + DHA", "Supplement", "capsule", "1000 mg", "capsule", 14, false, 680),
+  // Thyroid
+  m("Levothyroxine 50 mcg", "Levothyroxine sodium", "Thyroid hormone", "tablet", "50 mcg", "tablet", 1.6, true, 2400, 300),
+  m("Levothyroxine 100 mcg", "Levothyroxine sodium", "Thyroid hormone", "tablet", "100 mcg", "tablet", 2.2, true, 1600, 300),
+  // Neuro / psych
+  m("Pregabalin 75 mg", "Pregabalin", "Neuropathic pain", "capsule", "75 mg", "capsule", 12, true, 700),
+  m("Gabapentin 300 mg", "Gabapentin", "Anticonvulsant / neuropathic pain", "capsule", "300 mg", "capsule", 10, true, 450),
+  m("Escitalopram 10 mg", "Escitalopram", "Antidepressant (SSRI)", "tablet", "10 mg", "tablet", 7, true, 600),
+  m("Clonazepam 0.5 mg", "Clonazepam", "Anxiolytic (Schedule H1)", "tablet", "0.5 mg", "tablet", 3, true, 140, 60),
+  m("Sumatriptan 50 mg", "Sumatriptan", "Anti-migraine", "tablet", "50 mg", "tablet", 25, true, 160, 60),
+  // Skin
+  m("Clotrimazole Cream 1% (15 g)", "Clotrimazole", "Antifungal", "cream", "1% w/w", "15 g tube", 85, false, 140, 30),
+  m("Mupirocin Ointment 2% (5 g)", "Mupirocin", "Topical antibiotic", "ointment", "2% w/w", "5 g tube", 120, true, 85, 30),
+  m("Calamine Lotion 100 ml", "Calamine + Zinc oxide", "Skin soothing", "syrup", undefined, "100 ml bottle", 99, false, 60, 20),
+  m("Sunscreen Gel SPF 50 (50 g)", "Broad-spectrum sunscreen", "Skin care", "gel", "SPF 50 PA+++", "50 g tube", 450, false, 40, 15),
+  // Eye / ENT
+  m("Moxifloxacin Eye Drops 0.5% (5 ml)", "Moxifloxacin", "Ophthalmic antibiotic", "drops", "0.5% w/v", "5 ml bottle", 95, true, 110, 30),
+  m("Lubricating Eye Drops (10 ml)", "Carboxymethylcellulose 0.5%", "Ocular lubricant", "drops", "0.5% w/v", "10 ml bottle", 180, false, 96, 30),
+  m("Ciprofloxacin Ear Drops (10 ml)", "Ciprofloxacin 0.3%", "Otic antibiotic", "drops", "0.3% w/v", "10 ml bottle", 45, true, 70, 20),
+  // Women's health
+  m("Folic Acid 5 mg", "Folic acid", "Vitamin", "tablet", "5 mg", "tablet", 1.2, false, 1500, 200),
+  m("Progesterone 200 mg SR", "Natural micronised progesterone", "Hormone", "capsule", "200 mg", "capsule", 45, true, 210, 60),
+  // Others
+  m("Prednisolone 10 mg", "Prednisolone", "Corticosteroid", "tablet", "10 mg", "tablet", 1.5, true, 800),
+  m("Hydroxychloroquine 200 mg", "Hydroxychloroquine sulphate", "Antimalarial / DMARD", "tablet", "200 mg", "tablet", 9, true, 360),
+  // OTC & devices
+  m("Digital Thermometer", "Clinical digital thermometer", "Medical device", "device", undefined, "piece", 250, false, 35, 10),
+  m("Hand Sanitiser 500 ml", "Isopropyl alcohol 70%", "Hygiene", "gel", undefined, "500 ml bottle", 180, false, 60, 20),
+  m("Surgical Face Masks (pack of 50)", "3-ply surgical mask", "Hygiene", "device", undefined, "pack", 120, false, 8, 15),
+];
+
+export const HEALTH_PACKAGES = [
+  {
+    slug: "essential-health-check",
+    name: "Essential Health Check",
+    audience: "Adults under 35 · annual screening",
+    price: 1499,
+    mrp: 2800,
+    highlight: false,
+    tests: ["Complete Blood Count", "Fasting Blood Sugar", "Lipid Profile", "Liver Function Test", "Kidney Function Test", "Urine Routine", "Physician consultation"],
+  },
+  {
+    slug: "comprehensive-health-check",
+    name: "Comprehensive Health Check",
+    audience: "Adults 35+ · most popular",
+    price: 3999,
+    mrp: 7200,
+    highlight: true,
+    tests: ["Everything in Essential", "HbA1c", "Thyroid Profile", "Vitamin D & B12", "ECG", "Chest X-ray", "USG Abdomen", "Dietitian consultation", "Physician consultation"],
+  },
+  {
+    slug: "cardiac-risk-assessment",
+    name: "Cardiac Risk Assessment",
+    audience: "Family history, BP, diabetes or smokers",
+    price: 5499,
+    mrp: 9500,
+    highlight: false,
+    tests: ["Lipid Profile & Lp(a)", "hs-CRP", "HbA1c", "ECG", "2D Echo", "Treadmill Test (TMT)", "Cardiologist consultation"],
+  },
+  {
+    slug: "diabetes-care-package",
+    name: "Diabetes Care Package",
+    audience: "People living with diabetes",
+    price: 2499,
+    mrp: 4300,
+    highlight: false,
+    tests: ["HbA1c", "Fasting & PP Blood Sugar", "Kidney Function & Urine ACR", "Lipid Profile", "Diabetic foot screening", "Retina screening", "Diabetologist & dietitian consultation"],
+  },
+  {
+    slug: "womens-wellness",
+    name: "Women's Wellness",
+    audience: "Women 30+",
+    price: 4299,
+    mrp: 7800,
+    highlight: false,
+    tests: ["CBC & Iron studies", "Thyroid Profile", "Vitamin D", "Pap smear", "Mammography / Breast USG", "Bone density (DEXA)", "Gynaecologist consultation"],
+  },
+  {
+    slug: "senior-citizen-check",
+    name: "Senior Citizen Health Check",
+    audience: "60 years and above",
+    price: 4999,
+    mrp: 9000,
+    highlight: false,
+    tests: ["Comprehensive blood panel", "HbA1c", "PSA (men) / Pap smear (women)", "ECG & 2D Echo", "Chest X-ray", "Bone density (DEXA)", "Eye & hearing screening", "Geriatrician consultation"],
+  },
+];
+
+export const WARDS = [
+  { name: "Medical ICU", type: "ICU", floor: "Block A · 4th floor", totalBeds: 24, dailyRate: 9500 },
+  { name: "Cardiac Care Unit", type: "ICU", floor: "Block A · 2nd floor", totalBeds: 16, dailyRate: 11000 },
+  { name: "NICU", type: "ICU", floor: "Block C · 1st floor", totalBeds: 30, dailyRate: 8500 },
+  { name: "General Ward — Male", type: "General", floor: "Block B · 4th floor", totalBeds: 40, dailyRate: 1800 },
+  { name: "General Ward — Female", type: "General", floor: "Block B · 5th floor", totalBeds: 40, dailyRate: 1800 },
+  { name: "Semi-private Rooms", type: "Semi-private", floor: "Block C · 3rd floor", totalBeds: 30, dailyRate: 3800 },
+  { name: "Private Suites", type: "Private", floor: "Block C · 4th floor", totalBeds: 20, dailyRate: 6500 },
+  { name: "Maternity Ward", type: "Maternity", floor: "Block C · 2nd floor", totalBeds: 24, dailyRate: 3200 },
+];
+
+export const FIRST_NAMES_F = ["Priya", "Sunita", "Kavya", "Lakshmi", "Fatima", "Ishita", "Pooja", "Ritika", "Anjali", "Meena", "Divya", "Shreya", "Nandini", "Zoya", "Gayatri", "Rekha"];
+export const FIRST_NAMES_M = ["Amit", "Mohammed", "Arjun", "Rakesh", "George", "Sandeep", "Vivek", "Karthik", "Manoj", "Suresh", "Aakash", "Farhan", "Rahul", "Prakash", "Naveen", "Varun"];
+export const LAST_NAMES = ["Sharma", "Patel", "Reddy", "Singh", "Khan", "Bose", "Thomas", "Yadav", "Nair", "Gowda", "Mehta", "Das", "Joshi", "Kapoor", "Iyer", "Hegde", "Rao", "Pillai", "Saxena", "Mishra"];
+export const CITIES = ["Bengaluru", "Bengaluru", "Bengaluru", "Hosur", "Mysuru", "Bengaluru", "Tumakuru"];
+export const AREAS = ["HSR Layout", "Koramangala", "Whitefield", "Marathahalli", "Sarjapur Road", "Electronic City", "Indiranagar", "Jayanagar", "BTM Layout", "Bellandur"];
+
+export type RxTemplate = {
+  complaints: string;
+  diagnosis: string;
+  notes: string;
+  advice: string;
+  tests: string[];
+  diet: string;
+  /** [medicine name (exact seed name), frequency, days, timing] */
+  meds: [string, string, number, string][];
+};
+
+export const RX_TEMPLATES: Record<string, RxTemplate[]> = {
+  endocrinology: [
+    {
+      complaints: "Increased thirst, frequent urination, fatigue for 3 months",
+      diagnosis: "Type 2 diabetes mellitus — suboptimal control (HbA1c 8.4%)",
+      notes: "BMI 27.8. No neuropathy on monofilament testing. Feet examined, pulses felt.",
+      advice: "Check fasting and post-meal sugars twice a week and bring the log at follow-up. Walk 30–40 minutes daily.",
+      tests: ["HbA1c", "Fasting Blood Sugar", "Lipid Profile", "Kidney Function Test (KFT)"],
+      diet: "Diabetic (low glycaemic)",
+      meds: [
+        ["Metformin 1000 mg SR", "1-0-1", 30, "After food"],
+        ["Glimepiride 2 mg", "1-0-0", 30, "Before food"],
+        ["Methylcobalamin 1500 mcg", "1-0-0", 30, "After food"],
+      ],
+    },
+    {
+      complaints: "Weight gain, tiredness, feeling cold",
+      diagnosis: "Primary hypothyroidism",
+      notes: "TSH 9.8 mIU/L. Mild diffuse goitre, non-tender.",
+      advice: "Take thyroid tablet on an empty stomach, 30–45 minutes before breakfast, not with calcium or iron.",
+      tests: ["Thyroid Profile (T3, T4, TSH)", "Vitamin D (25-OH)"],
+      diet: "Weight management",
+      meds: [
+        ["Levothyroxine 50 mcg", "1-0-0", 60, "Empty stomach"],
+        ["Vitamin D3 60,000 IU", "STAT", 1, "After food"],
+      ],
+    },
+  ],
+  cardiology: [
+    {
+      complaints: "Occasional chest tightness on climbing stairs, breathlessness",
+      diagnosis: "Hypertension with dyslipidaemia; rule out stable angina",
+      notes: "BP 152/94. ECG: no acute changes. TMT planned.",
+      advice: "Limit salt to under 5 g a day. Stop smoking. Report chest pain at rest immediately to emergency.",
+      tests: ["Lipid Profile", "ECG", "2D Echo"],
+      diet: "DASH (low salt, heart healthy)",
+      meds: [
+        ["Telmisartan 40 mg", "1-0-0", 30, "After food"],
+        ["Atorvastatin 20 mg", "0-0-1", 30, "At bedtime"],
+        ["Aspirin 75 mg", "0-1-0", 30, "After food"],
+      ],
+    },
+    {
+      complaints: "Palpitations and dizziness for 2 weeks",
+      diagnosis: "Sinus tachycardia with anxiety; hypertension stage 1",
+      notes: "Holter advised. Thyroid profile to rule out hyperthyroidism.",
+      advice: "Reduce caffeine. Keep a palpitation diary.",
+      tests: ["Thyroid Profile (T3, T4, TSH)", "ECG", "Serum Electrolytes"],
+      diet: "Low fat / cardiac",
+      meds: [
+        ["Metoprolol 25 mg XL", "1-0-0", 30, "After food"],
+        ["Amlodipine 5 mg", "0-0-1", 30, "After food"],
+      ],
+    },
+  ],
+  "internal-medicine": [
+    {
+      complaints: "Fever with body ache and sore throat for 3 days",
+      diagnosis: "Acute upper respiratory tract infection",
+      notes: "Temp 100.8 °F. Throat congested. Chest clear.",
+      advice: "Warm saline gargles, steam inhalation, plenty of fluids and rest.",
+      tests: ["Complete Blood Count (CBC)", "CRP"],
+      diet: "Soft / bland (GI)",
+      meds: [
+        ["Paracetamol 650 mg", "1-1-1", 3, "After food"],
+        ["Azithromycin 500 mg", "1-0-0", 3, "After food"],
+        ["Montelukast + Levocetirizine", "0-0-1", 5, "At bedtime"],
+      ],
+    },
+    {
+      complaints: "Acidity, burning in the upper abdomen after meals",
+      diagnosis: "Gastritis / acid peptic disease",
+      notes: "Epigastric tenderness. No alarm features.",
+      advice: "Small frequent meals. Avoid lying down within 2 hours of a meal.",
+      tests: ["USG Abdomen"],
+      diet: "Soft / bland (GI)",
+      meds: [
+        ["Pantoprazole 40 mg", "1-0-0", 14, "Empty stomach"],
+        ["Domperidone 10 mg", "1-0-1", 7, "Before food"],
+      ],
+    },
+  ],
+  orthopaedics: [
+    {
+      complaints: "Knee pain while climbing stairs, morning stiffness",
+      diagnosis: "Osteoarthritis — both knees (Kellgren–Lawrence grade 2)",
+      notes: "Crepitus present. No effusion.",
+      advice: "Quadriceps strengthening exercises daily. Avoid squatting and sitting cross-legged.",
+      tests: ["Vitamin D (25-OH)", "Serum Creatinine"],
+      diet: "Weight management",
+      meds: [
+        ["Aceclofenac + Paracetamol", "1-0-1", 7, "After food"],
+        ["Pantoprazole 40 mg", "1-0-0", 7, "Empty stomach"],
+        ["Calcium + Vitamin D3", "0-1-0", 30, "After food"],
+      ],
+    },
+  ],
+  pulmonology: [
+    {
+      complaints: "Wheezing and cough, worse at night",
+      diagnosis: "Bronchial asthma — partly controlled",
+      notes: "Bilateral wheeze. SpO2 97% on room air.",
+      advice: "Rinse mouth after using the inhaler. Avoid dust and smoke exposure.",
+      tests: ["Chest X-ray (PA view)", "Complete Blood Count (CBC)"],
+      diet: "Balanced (general)",
+      meds: [
+        ["Budesonide + Formoterol Inhaler", "1-0-1", 30, "As directed"],
+        ["Salbutamol Inhaler 100 mcg", "SOS", 30, "As directed"],
+        ["Montelukast + Levocetirizine", "0-0-1", 30, "At bedtime"],
+      ],
+    },
+  ],
+  "obstetrics-gynaecology": [
+    {
+      complaints: "Routine antenatal visit — 14 weeks pregnant",
+      diagnosis: "Intrauterine pregnancy, 14 weeks, low risk",
+      notes: "BP 112/70. Fundal height corresponds to dates.",
+      advice: "Continue supplements. Report bleeding, severe headache or reduced movements immediately.",
+      tests: ["Complete Blood Count (CBC)", "Thyroid Profile (T3, T4, TSH)", "Urine Routine & Microscopy"],
+      diet: "Pregnancy & lactation",
+      meds: [
+        ["Folic Acid 5 mg", "1-0-0", 30, "After food"],
+        ["Iron + Folic Acid", "0-1-0", 30, "After food"],
+        ["Calcium + Vitamin D3", "0-0-1", 30, "After food"],
+      ],
+    },
+  ],
+  paediatrics: [
+    {
+      complaints: "Cough and runny nose for 4 days, mild fever",
+      diagnosis: "Viral upper respiratory infection",
+      notes: "Active, well hydrated. Chest clear.",
+      advice: "Saline nasal drops, adequate fluids. Return if breathing becomes fast or fever persists beyond 3 days.",
+      tests: [],
+      diet: "Paediatric",
+      meds: [
+        ["Paracetamol 650 mg", "SOS", 3, "After food"],
+        ["Ambroxol Syrup 100 ml", "1-1-1", 5, "After food"],
+      ],
+    },
+  ],
+  dermatology: [
+    {
+      complaints: "Itchy red patches in the groin for 2 weeks",
+      diagnosis: "Tinea cruris",
+      notes: "Annular lesions with active border.",
+      advice: "Keep the area dry, wear loose cotton clothing, do not share towels.",
+      tests: [],
+      diet: "Balanced (general)",
+      meds: [
+        ["Clotrimazole Cream 1% (15 g)", "1-0-1", 21, "As directed"],
+        ["Cetirizine 10 mg", "0-0-1", 10, "At bedtime"],
+      ],
+    },
+  ],
+  neurology: [
+    {
+      complaints: "Recurrent one-sided headaches with nausea, 3–4 per month",
+      diagnosis: "Migraine without aura",
+      notes: "Neurological examination normal.",
+      advice: "Maintain a headache diary, regular sleep and meals, limit screen time.",
+      tests: [],
+      diet: "Balanced (general)",
+      meds: [
+        ["Sumatriptan 50 mg", "SOS", 30, "As directed"],
+        ["Ondansetron 4 mg", "SOS", 10, "As directed"],
+      ],
+    },
+  ],
+  nephrology: [
+    {
+      complaints: "Swelling of feet, raised creatinine on reports",
+      diagnosis: "Chronic kidney disease stage 3a — diabetic nephropathy",
+      notes: "eGFR 52. Urine ACR raised.",
+      advice: "Avoid painkillers like ibuprofen/diclofenac. Monitor BP daily.",
+      tests: ["Kidney Function Test (KFT)", "Serum Electrolytes", "Urine Routine & Microscopy"],
+      diet: "Renal (low protein, low potassium)",
+      meds: [
+        ["Telmisartan 40 mg", "1-0-0", 30, "After food"],
+        ["Furosemide 40 mg", "1-0-0", 15, "After food"],
+      ],
+    },
+  ],
+  gastroenterology: [
+    {
+      complaints: "Bloating, irregular bowel habits for 2 months",
+      diagnosis: "Irritable bowel syndrome (IBS-C) with fatty liver grade 1",
+      notes: "USG: grade 1 fatty liver.",
+      advice: "Regular meal times, increase fibre gradually, daily exercise.",
+      tests: ["Liver Function Test (LFT)", "USG Abdomen"],
+      diet: "Weight management",
+      meds: [
+        ["Probiotic Capsules", "1-0-0", 14, "After food"],
+        ["Lactulose Solution 100 ml", "0-0-1", 10, "At bedtime"],
+      ],
+    },
+  ],
+  psychiatry: [
+    {
+      complaints: "Low mood, poor sleep and loss of interest for 6 weeks",
+      diagnosis: "Moderate depressive episode",
+      notes: "No suicidal ideation. Good family support.",
+      advice: "Continue counselling sessions weekly. Do not stop medicines suddenly.",
+      tests: ["Thyroid Profile (T3, T4, TSH)", "Vitamin B12"],
+      diet: "Balanced (general)",
+      meds: [["Escitalopram 10 mg", "1-0-0", 30, "After food"]],
+    },
+  ],
+};
+
+export const CARE_PLANS: Record<
+  string,
+  { calories?: number; meals: Record<string, string>; include: string; avoid: string; hydration: string; exercise: string; lifestyle: string; sleep: string }
+> = {
+  "Diabetic (low glycaemic)": {
+    calories: 1800,
+    meals: {
+      earlyMorning: "1 glass warm water with soaked methi seeds; 5 almonds + 2 walnuts",
+      breakfast: "2 besan / moong dal chilla with mint chutney, or vegetable oats upma; 1 cup tea without sugar",
+      midMorning: "1 guava or 1 small apple with skin",
+      lunch: "2 multigrain rotis, 1 bowl dal, 1 bowl green vegetable sabzi, large salad, 1 bowl curd",
+      evening: "Roasted chana (30 g) or sprouts chaat; green tea",
+      dinner: "1–2 rotis or ½ cup brown rice, paneer/tofu or grilled fish, sautéed vegetables",
+      bedtime: "1 cup warm turmeric milk without sugar (if fasting sugar is controlled)",
+    },
+    include: "Whole grains (millets, oats, brown rice), dals and legumes, leafy greens, low-GI fruits (guava, apple, pear, berries), curd, nuts, seeds",
+    avoid: "Sugar, sweets, honey and jaggery; fruit juices; white bread and maida; fried snacks; potatoes and sweet potatoes in large portions; sugary drinks",
+    hydration: "2.5–3 litres of water a day. Prefer buttermilk, lemon water without sugar or coconut water (small glass).",
+    exercise: "Brisk walk 30–40 minutes daily (ideally after dinner) plus light resistance exercise 3 days a week.",
+    lifestyle: "Eat at fixed times — don't skip meals. Check feet daily for cuts or blisters. Carry a glucose tablet in case of low sugar.",
+    sleep: "7–8 hours. Avoid screens 1 hour before bed.",
+  },
+  "DASH (low salt, heart healthy)": {
+    calories: 1900,
+    meals: {
+      earlyMorning: "Lukewarm water; 4–5 soaked almonds",
+      breakfast: "Vegetable poha or oats with skimmed milk; 1 fruit",
+      midMorning: "1 bowl papaya or 1 orange",
+      lunch: "2 rotis, dal, mixed vegetable sabzi with minimal salt, cucumber–tomato salad, low-fat curd",
+      evening: "Roasted makhana or a handful of unsalted peanuts; herbal tea",
+      dinner: "Vegetable khichdi or grilled fish / paneer with sautéed vegetables",
+      bedtime: "Warm low-fat milk",
+    },
+    include: "Fresh fruits and vegetables, whole grains, low-fat dairy, nuts, seeds, fish, olive or mustard oil in moderation",
+    avoid: "Pickles, papads, chips, namkeen, processed and packaged food, extra table salt, red meat, butter and ghee in excess",
+    hydration: "2–2.5 litres of water daily unless your doctor has restricted fluids.",
+    exercise: "30 minutes of moderate walking at least 5 days a week. Avoid heavy lifting until reviewed.",
+    lifestyle: "Keep salt under 5 g a day (1 teaspoon). Stop smoking. Limit alcohol. Check BP twice a week and keep a log.",
+    sleep: "7–8 hours; consider evaluation if you snore loudly.",
+  },
+  "Low fat / cardiac": {
+    calories: 1800,
+    meals: {
+      breakfast: "Oats or daliya with skimmed milk; 1 fruit",
+      midMorning: "Buttermilk or a fruit",
+      lunch: "2 rotis, dal, green vegetables, salad",
+      evening: "Sprouts or roasted chana",
+      dinner: "Light meal — vegetable soup, 1 roti, sabzi",
+    },
+    include: "High-fibre foods, oats, fruits, vegetables, fish, flaxseeds, walnuts",
+    avoid: "Fried foods, red meat, full-cream dairy, bakery items, trans fats",
+    hydration: "2–2.5 litres a day.",
+    exercise: "Walking 30 minutes daily; breathing exercises.",
+    lifestyle: "Limit caffeine to 1–2 cups. Practise relaxation for 10 minutes daily.",
+    sleep: "7–8 hours.",
+  },
+  "Soft / bland (GI)": {
+    meals: {
+      breakfast: "Idli with thin sambar or suji upma; weak tea",
+      midMorning: "Banana or tender coconut water",
+      lunch: "Soft rice with moong dal, lauki/tinda sabzi, curd",
+      evening: "Toast or rusk with a glass of buttermilk",
+      dinner: "Moong dal khichdi with curd",
+    },
+    include: "Soft, home-cooked food, moong dal, rice, curd, banana, boiled vegetables, soups",
+    avoid: "Spicy, oily and fried food; raw salads for now; coffee, carbonated drinks and alcohol; eating late at night",
+    hydration: "Sip water frequently — at least 2.5–3 litres a day, more if you have fever.",
+    exercise: "Rest while unwell; resume light walks once fever settles.",
+    lifestyle: "Eat small, frequent meals. Avoid lying down within 2 hours of eating.",
+    sleep: "Adequate rest — 8 hours.",
+  },
+  "Weight management": {
+    calories: 1500,
+    meals: {
+      earlyMorning: "Warm water with lemon",
+      breakfast: "Vegetable omelette (2 whites + 1 egg) or moong chilla; black coffee or green tea",
+      midMorning: "1 fruit",
+      lunch: "1 roti + 1 small bowl rice, dal, sabzi, large salad",
+      evening: "Roasted makhana / chana; green tea",
+      dinner: "Grilled paneer/chicken/fish with vegetables, or vegetable soup with 1 roti — before 8 PM",
+    },
+    include: "High-protein, high-fibre foods; vegetables at every meal; portion-controlled whole grains",
+    avoid: "Sugary drinks, sweets, fried snacks, bakery items, late-night eating, large portions of rice",
+    hydration: "3 litres of water a day.",
+    exercise: "150–200 minutes a week of brisk walking/cycling plus strength training twice a week.",
+    lifestyle: "Track weight weekly, use a smaller plate, eat slowly.",
+    sleep: "7–8 hours; poor sleep increases hunger.",
+  },
+  "Renal (low protein, low potassium)": {
+    calories: 1800,
+    meals: {
+      breakfast: "Poha / upma / 2 idlis with coconut-free chutney",
+      midMorning: "Apple or pear (1 small)",
+      lunch: "Rice or 2 rotis, ½ bowl dal (leached), leached vegetable sabzi (bottle gourd, ridge gourd)",
+      evening: "Puffed rice or rice flakes snack",
+      dinner: "2 rotis with leached vegetables",
+    },
+    include: "Low-potassium vegetables (leached), measured protein, rice, rotis",
+    avoid: "Banana, coconut water, oranges, tomatoes in excess, salt substitutes, packaged foods, extra salt",
+    hydration: "Fluid as advised by your nephrologist — usually 1–1.5 litres including soups and tea.",
+    exercise: "Gentle walking 20–30 minutes daily.",
+    lifestyle: "Avoid over-the-counter painkillers. Monitor BP and weight daily.",
+    sleep: "7–8 hours.",
+  },
+  "Pregnancy & lactation": {
+    calories: 2200,
+    meals: {
+      earlyMorning: "Soaked almonds and walnuts",
+      breakfast: "Stuffed paratha with curd, or vegetable upma with a glass of milk",
+      midMorning: "Seasonal fruit + coconut water",
+      lunch: "2–3 rotis, dal, green leafy vegetable, curd, salad",
+      evening: "Sprouts chaat / peanut chikki / dates",
+      dinner: "Rice or rotis with paneer / egg / fish curry and vegetables",
+      bedtime: "Warm milk",
+    },
+    include: "Iron-rich foods (greens, dates, jaggery in small amounts), dairy, eggs, fruits, nuts, adequate protein",
+    avoid: "Raw papaya, unpasteurised milk, raw or undercooked meat/eggs, excess caffeine, alcohol",
+    hydration: "3 litres of fluid a day.",
+    exercise: "Walking 30 minutes a day and prenatal yoga as advised.",
+    lifestyle: "Take supplements regularly. Attend all antenatal visits.",
+    sleep: "8 hours plus rest in the afternoon, preferably on the left side.",
+  },
+  "Balanced (general)": {
+    meals: {
+      breakfast: "Idli/dosa/poha/oats with a protein source (eggs, sprouts or milk)",
+      midMorning: "1 seasonal fruit",
+      lunch: "Rotis/rice, dal, vegetables, salad, curd",
+      evening: "Nuts / roasted chana with tea",
+      dinner: "Light, early dinner with vegetables and protein",
+    },
+    include: "Variety of fruits and vegetables, whole grains, pulses, dairy, nuts",
+    avoid: "Excess sugar, deep-fried and ultra-processed foods",
+    hydration: "2.5–3 litres a day.",
+    exercise: "30 minutes of activity most days of the week.",
+    lifestyle: "Limit screen time; take short breaks every hour if desk-bound.",
+    sleep: "7–8 hours.",
+  },
+  Paediatric: {
+    meals: {
+      breakfast: "Milk with ragi porridge or idli",
+      midMorning: "Fruit (banana / apple)",
+      lunch: "Soft rice, dal, vegetables, curd",
+      evening: "Milk / homemade snack",
+      dinner: "Khichdi or chapati with dal and vegetables",
+    },
+    include: "Home-cooked meals, fruits, milk, eggs",
+    avoid: "Packaged juices, chips, chocolates and cold drinks while unwell",
+    hydration: "Offer water frequently; ORS if loose stools.",
+    exercise: "Normal play once fever has settled.",
+    lifestyle: "Hand-washing before meals; keep vaccinations up to date.",
+    sleep: "10–12 hours.",
+  },
+};
